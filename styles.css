@@ -3,13 +3,15 @@
 }
 
 body {
-  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-family: system-ui, sans-serif;
   color: black;
   background-color: white;
 }
 
 nav {
+ 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -18,6 +20,9 @@ nav {
   gap: 0.5rem;
   border-bottom: solid 1px #aaa;
   background-color: #0096FF;
+
+  position: fixed;
+  width: 100%; 
 }
 .column {
   float: left;
@@ -39,15 +44,25 @@ nav {
   bottom: 20%;
 }
 .header{
+  top: 0px;
+  position: sticky;
   background-color: #0096FF;
   display: inline-block;
-  width: 100%;
+  width: 110%;
   padding: 0.5rem;
   border-radius: 0.2rem;
-  border: solid 1px #000000;
+  border-bottom: solid 2px #000000;
   text-align: center;
   text-decoration: none;
   color:  #000000;
+  height: 60px;
+  
+}
+#container{
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  top: 0%;
 }
 
 nav a {
@@ -80,18 +95,22 @@ form{
 
 }
 table, tr, td{
-  border: 2px solid;
-  border-spacing: 0 30px;
+  border: 1px solid rgb(213, 212, 212);
+  border-spacing: 0 5px;
+  padding-bottom: 0.2rem;
+  margin-bottom: 20px;
 }
 footer {
   position: fixed;
   bottom: 0%;
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.1rem;
   text-align: center;
+  height: 7%;
   background-color: #0096FF;
-  color: #000000
-  
+  color: #000000;
+  padding-top: 1rem;
+  line-height: 20px;
 }
 form{
   border: 2px solid;
@@ -135,6 +154,7 @@ label {
   display: inline-block;
 }
 main {
+  margin-top: 40px;
   padding: 1rem;
  
 }
