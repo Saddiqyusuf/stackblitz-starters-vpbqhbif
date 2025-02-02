@@ -8,7 +8,7 @@
     <script type="module" src="script.js"></script>
   </head>
   
-  <body>
+  <body id='body'>
     <div id="container">
     <div class="header"> <h1> AtoZ Stationery </h1></div> 
     <nav>
@@ -27,6 +27,7 @@
     <main>
       <br><br>
       <h3>Get Notepads Toady</h3>
+        <button onclick="changeColor();" style="float: right;">Change color</button>
       <table style="border:0px;border-spacing: 20px;" align="center">
         <tr> <td style="width:300px;height:200px; padding: 15px;">
          <img src="/images/business_notebook.jpg" alt="business_notebook" style="width:300px;height:200px;" ><br><h3>Business notepad</h3>
@@ -70,6 +71,18 @@
         </td></tr>
      </table>
     </main>
+    <script>
+     colors = ["black", "white"];
+    var colorIndex = 0;
+    function changeColor() {
+        var col = document.getElementById("body");
+        if( colorIndex >= colors.length ) {
+            colorIndex = 0;
+        }
+        col.style.backgroundColor = colors[colorIndex];
+        colorIndex++;
+    }
+      </script>
   </body>
   <footer > <h1> &COPY; AtoZ Stationery </h1>
 </footer>

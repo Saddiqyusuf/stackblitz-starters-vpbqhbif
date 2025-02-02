@@ -8,7 +8,19 @@
     <script type="module" src="script.js"></script>
   </head>
   
-  <body>
+  <body id="body">
+    <script>
+      colors = ["black", "white"];
+     var colorIndex = 0;
+     function changeColor() {
+         var col = document.getElementById("body");
+         if( colorIndex >= colors.length ) {
+             colorIndex = 0;
+         }
+         col.style.backgroundColor = colors[colorIndex];
+         colorIndex++;
+     }
+       </script>
     <div id="container">
     <div class="header"> <h1> AtoZ Stationery </h1></div> 
     <nav>
@@ -23,8 +35,9 @@
     </nav>
   </div>
     <main>
-      <br>
+      <br><br>
       <h3>Artist Equipment</h3>
+      <button onclick="changeColor();" style="float: right;">Change color</button>
       <table style="border:0px;border-spacing: 20px;" align="center">
         <tr> <td style="width:300px;height:300px; padding: 15px;">
          <img src="/images/Wooden_Palette.jpg" alt="Wooden_Palette" style="width:300px;height:300px;" ><br> <h3>Wooden Pallet​</h3>
