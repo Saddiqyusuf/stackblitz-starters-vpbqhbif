@@ -20,6 +20,14 @@
          }
          col.style.backgroundColor = colors[colorIndex];
          colorIndex++;
+         var btn = 
+                document.querySelector('button');
+            if (btn.innerText === 'White Background') {
+                btn.innerText = 'Black Background';
+
+            } else {
+                btn.innerText = 'White Background';
+            }
       }
        </script>
     <div id="container">
@@ -38,7 +46,7 @@
   </div>
     <main>
       <br><br>
-      <h3>Get Your Office Equipment Toady</h3><button onclick="changeColor();" style="float: right;">Change color</button></br>
+      <h3>Get Your Office Equipment Toady</h3><button onclick="changeColor();" style="float: right;">White Background</button></br>
       <h3>Office Equipment Toady</h3>
 
       <table style="border:0px;border-spacing: 20px;" align="center">

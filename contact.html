@@ -10,18 +10,7 @@
   </head>
   
   <body id="body">
-    <script>
-      colors = ["black", "white"];
-     var colorIndex = 0;
-     function changeColor() {
-         var col = document.getElementById("body");
-         if( colorIndex >= colors.length ) {
-             colorIndex = 0;
-         }
-         col.style.backgroundColor = colors[colorIndex];
-         colorIndex++;
-     }
-       </script>
+ 
     <div id="container">
       <div class="header"> <h1> AtoZ Stationery </h1></div> 
     <nav>
@@ -37,9 +26,9 @@
     </nav>
     </div>
     <main>
-      <br><br>
+      
       <h3>Contact-us</h3>
-      <button onclick="changeColor();" style="float: right;">Change color</button>
+      <button onclick="changeColor();" style="float: right;">White Background</button>
     <form action="#" >
       <label for="name" id="name"> Name: </label> &emsp;&emsp;&emsp; &emsp;&emsp;
       <input type="text" id="name" name="name" placeholder="Your Full Name ..." > </br> </br> </br>
@@ -86,6 +75,26 @@
       </td></tr>
       </table>
     </main>
+    <script>
+      colors = ["black", "white"];
+     var colorIndex = 0;
+     function changeColor() {
+         var col = document.getElementById("body");
+         if( colorIndex >= colors.length ) {
+             colorIndex = 0;
+         }
+         col.style.backgroundColor = colors[colorIndex];
+         colorIndex++;
+         var btn = 
+                document.querySelector('button');
+            if (btn.innerText === 'White Background') {
+                btn.innerText = 'Black Background';
+
+            } else {
+                btn.innerText = 'White Background';
+            }
+     }
+       </script>
   </body>
   <footer ><h1> &COPY; AtoZ Stationery </h1>
 </footer>

@@ -25,9 +25,9 @@
   </div> 
   
     <main>
-      <br><br>
+      
       <h3>Get Notepads Toady</h3>
-        <button onclick="changeColor();" style="float: right;">Change color</button>
+        <button onclick="changeColor();" style="float: right;">White Background</button>
       <table style="border:0px;border-spacing: 20px;" align="center">
         <tr> <td style="width:300px;height:200px; padding: 15px;">
          <img src="/images/business_notebook.jpg" alt="business_notebook" style="width:300px;height:200px;" ><br><h3>Business notepad</h3>
@@ -81,6 +81,14 @@
         }
         col.style.backgroundColor = colors[colorIndex];
         colorIndex++;
+        var btn = 
+                document.querySelector('button');
+            if (btn.innerText === 'White Background') {
+                btn.innerText = 'Black Background';
+
+            } else {
+                btn.innerText = 'White Background';
+            }
     }
       </script>
   </body>
