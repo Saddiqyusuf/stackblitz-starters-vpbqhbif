@@ -34,7 +34,7 @@
     <main ><br><br>
       <h3>Home page</h3>&emsp;
       
-        <button onclick="changeColor();" style="float: right;">Change color</button>
+        <button onclick="changeColor();" style="float: right;">White Background</button>
       <div class="slideshow-container">
 
         <div class="mySlides fade">
@@ -125,9 +125,19 @@
         }
         col.style.backgroundColor = colors[colorIndex];
         colorIndex++;
+       
+         btn = 
+                document.querySelector('button');
+            if (btn.innerText === 'White Background') {
+                btn.innerText = 'Black Background';
+
+            } else {
+                btn.innerText = 'White Background';
+            }
+
     }
       </script>
-    <footer ><h1 style="padding-bottom: 50px;">&COPY; AtoZ Stationery </h1> 
+    <footer ><h1>&COPY; AtoZ Stationery </h1> 
     </footer>
   </body>
 </html>
